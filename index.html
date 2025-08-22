@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Ximena Arenas Tenor | Fonoaudióloga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #e6ffe6 0%, #ccffcc 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .logo-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+        
+        .logo-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            background: linear-gradient(135deg, #9ae6b4 0%, #c4fad0 100%);
+            color: white;
+        }
+        
+        .testimonial-card:hover .text-gray-600 {
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <div class="logo-container mr-2">
+                                <div class="logo-circle">
+                                    <img src="/home/mamur/Desktop/logofonoarenas.jpeg" 
+                                         class="rounded-full w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <span class="font-semibold text-gray-800 text-lg">Lic. Ximena Arenas</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#inicio" class="py-4 px-2 text-green-600 border-b-4 border-indigo-600 font-medium">Inicio</a>
+                    <a href="#servicios" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">Servicios</a>
+                    <a href="#sobre-mi" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">Sobre Mí</a>
+                    <a href="#testimonios" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">Testimonios</a>
+                    <a href="#contacto" class="py-4 px-2 text-gray-500 hover:text-green-600 transition duration-300">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500" 
+                            x-show="!showMenu"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li><a href="#inicio" class="block text-sm px-2 py-4 text-white bg-green-600 font-semibold">Inicio</a></li>
+                <li><a href="#servicios" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">Servicios</a></li>
+                <li><a href="#sobre-mi" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">Sobre Mí</a></li>
+                <li><a href="#contacto" class="block text-sm px-2 py-4 hover:bg-green-600 hover:text-white transition duration-300">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
+                    <div class="relative">
+                        <div class="absolute -bottom-3 -right-3 bg-green-600 text-white p-3 rounded-full shadow-lg">
+                            <i class="fas fa-comment-medical text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Lic. Ximena Arenas Tenor</h1>
+                    <h2 class="text-2xl text-green-600 mb-6">Fonoaudióloga Especialista en Lenguaje y Audición</h2>
+                    <p class="text-gray-600 mb-8">Brindando atención personalizada para mejorar la comunicación y calidad de vida de mis pacientes.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Servicios Especializados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-language text-pink-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Evaluación del Lenguaje</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Evaluación integral de las habilidades lingüísticas en niños y adultos para detectar trastornos del lenguaje.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Evaluación de vocabulario
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Análisis de estructura gramatical
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Diagnóstico de trastornos específicos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-assistive-listening-systems text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Terapia Auditiva</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Programas de rehabilitación auditiva para personas con pérdida de audición o dificultades de procesamiento.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Adaptación a audífonos
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Terapia de discriminación auditiva
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Entrenamiento en localización sonora
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-child text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Intervención Temprana</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Programas diseñados para estimular el desarrollo del lenguaje en niños con retrasos o trastornos.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Estimulación del lenguaje
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Desarrollo de habilidades comunicativas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Orientación a padres
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre Mí</h2>
+                    <p class="text-gray-600 mb-4">Soy la Lic. Ximena Arenas Tenor, fonoaudióloga especializada en lenguaje y audición.</p>
+                    <p class="text-gray-600 mb-6">Mi enfoque se centra en brindar atención personalizada, utilizando técnicas basadas en evidencia científica y adaptadas a las necesidades individuales de cada paciente.</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h3 class="text-xl font-semibold text-green-600 mb-3">Formación Académica</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Licenciatura en Fonoaudiología - Universidad Nacional de Buenos Aires</span>
+                            </li>                           
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-green-600 mb-3">Enfoque Terapéutico</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-heart text-pink-500 mr-2"></i>
+                                <span class="text-gray-700">Empatía</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-lightbulb text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Innovación</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-hands-helping text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Acompañamiento</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-book text-green-500 mr-2"></i>
+                                <span class="text-gray-700">Evidencia científica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Contacto</h2>
+                                        
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <a href="https://wa.me/5491137815288" target="_blank" class="text-green-600">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">WhatsApp</h4>
+                                <p class="text-gray-600">+54 9 11 3781-5288</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <a href="https://www.instagram.com/fono.arenast/" target="_blank" class="text-green-600">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Instagram</h4>
+                                <p class="text-gray-600">@fono.arenast</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+           
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        
+
+        // Back to top button
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove("opacity-0", "invisible");
+                backToTopButton.classList.add("opacity-100", "visible");
+            } else {
+                backToTopButton.classList.remove("opacity-100", "visible");
+                backToTopButton.classList.add("opacity-0", "invisible");
+            }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
